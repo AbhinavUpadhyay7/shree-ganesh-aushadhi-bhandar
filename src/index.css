@@ -1,0 +1,1759 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-family:
+    Inter,
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  color: #173e31;
+  background: #edf4f1;
+}
+
+html {
+  min-width: 320px;
+  background: #edf4f1;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      #ffffff 0,
+      #eef6f2 40%,
+      #e4eee9 100%
+    );
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+/* ==========================================
+   TOP BAR
+========================================== */
+
+.topbar {
+  min-height: 70px;
+
+  padding: 0 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: white;
+
+  background:
+    linear-gradient(
+      110deg,
+      #045b45,
+      #08745a
+    );
+
+  box-shadow:
+    0 7px 25px
+    rgba(0, 74, 54, 0.18);
+}
+
+.topbar-brand {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+}
+
+.top-logo {
+  width: 43px;
+  height: 43px;
+
+  border:
+    2px solid
+    rgba(255,255,255,.8);
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.top-shop-name {
+  font-size: 17px;
+  font-weight: 900;
+}
+
+.top-caption {
+  margin-top: 3px;
+
+  font-size: 9px;
+
+  opacity: .72;
+
+  letter-spacing: .4px;
+}
+
+.system-status {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  padding:
+    7px 13px;
+
+  border-radius: 20px;
+
+  background:
+    rgba(255,255,255,.11);
+
+  font-size: 9px;
+
+  font-weight: 800;
+}
+
+.system-status span {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #70e6a8;
+}
+
+/* ==========================================
+   MAIN
+========================================== */
+
+.main-container {
+  width:
+    min(
+      1360px,
+      calc(100% - 42px)
+    );
+
+  margin:
+    30px auto;
+}
+
+/* ==========================================
+   BILL CARD
+========================================== */
+
+.billing-card {
+  width: 100%;
+
+  background: white;
+
+  border:
+    1px solid
+    #d6e3dc;
+
+  border-radius: 15px;
+
+  padding: 30px;
+
+  box-shadow:
+    0 18px 55px
+    rgba(35,73,59,.12);
+}
+
+/* ==========================================
+   BILL HEADER
+========================================== */
+
+.bill-header {
+  position: relative;
+
+  min-height: 122px;
+
+  display: flex;
+  align-items: flex-start;
+}
+
+.brand-area {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 15px;
+
+  padding-right: 140px;
+}
+
+.logo-wrap {
+  width: 70px;
+  height: 70px;
+
+  flex-shrink: 0;
+
+  overflow: hidden;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shop-logo {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+.shop-info h1 {
+  color: #087057;
+
+  font-size: 29px;
+
+  line-height: .95;
+
+  font-weight: 950;
+
+  letter-spacing: .2px;
+}
+
+.shop-info h2 {
+  margin-top: 6px;
+
+  color: #087057;
+
+  font-size: 18px;
+
+  line-height: 1.1;
+
+  font-weight: 900;
+}
+
+.shop-tagline {
+  margin-top: 7px;
+
+  color: #527267;
+
+  font-size: 10px;
+
+  font-weight: 900;
+}
+
+.shop-contact {
+  margin-top: 4px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 2px;
+
+  color: #7a8c84;
+
+  font-size: 9px;
+}
+
+.invoice-meta {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  width: 100px;
+
+  text-align: right;
+}
+
+.meta-label {
+  color: #84918c;
+
+  font-size: 8px;
+
+  font-weight: 900;
+
+  letter-spacing: .7px;
+}
+
+.meta-number {
+  margin-top: 3px;
+
+  color: #087057;
+
+  font-size: 22px;
+
+  line-height: 1;
+
+  font-weight: 950;
+}
+
+.date-label {
+  margin-top: 17px;
+}
+
+.meta-date {
+  margin-top: 3px;
+
+  color: #315448;
+
+  font-size: 11px;
+
+  font-weight: 900;
+}
+
+/* ==========================================
+   HINDI CONTROL
+========================================== */
+
+.header-controls {
+  min-height: 42px;
+
+  margin-top: 8px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  flex-wrap: wrap;
+}
+
+.hindi-toggle {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color: #63766e;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+}
+
+.hindi-toggle input {
+  width: 14px;
+  height: 14px;
+
+  accent-color: #08745a;
+
+  cursor: pointer;
+}
+
+.hindi-name-input {
+  width: 250px;
+  height: 34px;
+
+  padding:
+    0 10px;
+
+  border:
+    1px solid
+    #c8d8d1;
+
+  border-radius: 6px;
+
+  outline: none;
+
+  color: #244d3e;
+
+  background: white;
+
+  font-size: 10px;
+}
+
+.hindi-name-input:focus {
+  border-color: #08745a;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(8,116,90,.06);
+}
+
+.bill-divider {
+  width: 100%;
+  height: 1px;
+
+  margin-top: 10px;
+
+  background: #dce7e2;
+}
+
+/* ==========================================
+   SECTION
+========================================== */
+
+.customer-section,
+.medicine-section {
+  margin-top: 24px;
+}
+
+.section-heading {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 13px;
+}
+
+.section-icon {
+  width: 37px;
+  height: 37px;
+
+  flex-shrink: 0;
+
+  border-radius: 9px;
+
+  background: #eaf7ef;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 16px;
+}
+
+.medicine-section-icon {
+  background: #eef8ef;
+}
+
+.section-heading h3 {
+  color: #244b3e;
+
+  font-size: 14px;
+
+  font-weight: 950;
+}
+
+.section-heading p {
+  margin-top: 2px;
+
+  color: #8a9791;
+
+  font-size: 9px;
+}
+
+/* ==========================================
+   CUSTOMER
+========================================== */
+
+.customer-card {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 12px;
+
+  padding: 14px;
+
+  border:
+    1px solid
+    #d8e4de;
+
+  border-radius: 9px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff,
+      #fbfdfc
+    );
+}
+
+.customer-field label {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #61736a;
+
+  font-size: 8px;
+
+  font-weight: 950;
+
+  letter-spacing: .5px;
+}
+
+.customer-field input {
+  width: 100%;
+  height: 38px;
+
+  padding:
+    0 10px;
+
+  border:
+    1px solid
+    #cedbd5;
+
+  border-radius: 6px;
+
+  outline: none;
+
+  color: #23483a;
+
+  background: white;
+
+  font-size: 10px;
+}
+
+.customer-field input:focus {
+  border-color: #08745a;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(8,116,90,.06);
+}
+
+/* ==========================================
+   MEDICINE TABLE
+========================================== */
+
+.medicine-table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+
+  border:
+    1px solid
+    #d6e3dc;
+
+  border-radius: 9px;
+}
+
+.medicine-table {
+  width: 100%;
+
+  min-width: 1180px;
+
+  border-collapse: collapse;
+
+  table-layout: fixed;
+}
+
+.medicine-table th {
+  height: 39px;
+
+  padding: 6px 4px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #eefaf3,
+      #e5f5ec
+    );
+
+  border-bottom:
+    1px solid
+    #c9ddd2;
+
+  color: #087057;
+
+  font-size: 8px;
+
+  font-weight: 950;
+
+  text-align: center;
+}
+
+.medicine-table td {
+  padding: 6px 4px;
+
+  border-bottom:
+    1px solid
+    #e3ebe7;
+
+  text-align: center;
+
+  background: white;
+}
+
+.medicine-table th:nth-child(1),
+.medicine-table td:nth-child(1) {
+  width: 40px;
+}
+
+.medicine-table th:nth-child(2),
+.medicine-table td:nth-child(2) {
+  width: 20%;
+}
+
+.medicine-table th:nth-child(3),
+.medicine-table td:nth-child(3) {
+  width: 13%;
+}
+
+.medicine-table th:nth-child(4),
+.medicine-table td:nth-child(4) {
+  width: 10%;
+}
+
+.medicine-table th:nth-child(5),
+.medicine-table td:nth-child(5) {
+  width: 9%;
+}
+
+.medicine-table th:nth-child(6),
+.medicine-table td:nth-child(6) {
+  width: 6%;
+}
+
+.medicine-table th:nth-child(7),
+.medicine-table td:nth-child(7) {
+  width: 9%;
+}
+
+.medicine-table th:nth-child(8),
+.medicine-table td:nth-child(8) {
+  width: 8%;
+}
+
+.medicine-table th:nth-child(9),
+.medicine-table td:nth-child(9) {
+  width: 6%;
+}
+
+.medicine-table th:nth-child(10),
+.medicine-table td:nth-child(10) {
+  width: 10%;
+}
+
+.medicine-table th:nth-child(11),
+.medicine-table td:nth-child(11) {
+  width: 38px;
+}
+
+.row-no {
+  color: #61746a;
+
+  font-size: 9px;
+
+  font-weight: 900;
+}
+
+.medicine-table td input {
+  width: 100%;
+  height: 34px;
+
+  padding:
+    0 7px;
+
+  border:
+    1px solid
+    #ccd9d3;
+
+  border-radius: 5px;
+
+  outline: none;
+
+  color: #234a3b;
+
+  background: white;
+
+  font-size: 9px;
+}
+
+.medicine-table td input:focus {
+  border-color: #08745a;
+
+  box-shadow:
+    0 0 0 2px
+    rgba(8,116,90,.06);
+}
+
+.medicine-name-input {
+  font-weight: 700;
+}
+
+/* EXPIRY */
+
+.expiry-input {
+  text-align: center;
+  letter-spacing: .4px;
+  font-weight: 700;
+}
+
+.amount-cell {
+  color: #087057;
+
+  font-size: 9px;
+
+  font-weight: 950;
+
+  white-space: nowrap;
+}
+
+.delete-row {
+  width: 28px;
+  height: 28px;
+
+  border: none;
+
+  border-radius: 6px;
+
+  background: #fff0f0;
+
+  color: #dc5555;
+
+  font-size: 17px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.add-medicine {
+  margin-top: 11px;
+
+  height: 34px;
+
+  padding:
+    0 14px;
+
+  border:
+    1px dashed
+    #0a9b61;
+
+  border-radius: 6px;
+
+  background: white;
+
+  color: #087057;
+
+  font-size: 9px;
+
+  font-weight: 950;
+
+  cursor: pointer;
+}
+
+/* ==========================================
+   SUMMARY
+========================================== */
+
+.summary-wrapper {
+  display: flex;
+
+  justify-content: flex-end;
+
+  margin-top: 18px;
+}
+
+.summary-box {
+  width: 325px;
+
+  border:
+    1px solid
+    #d5e2dc;
+
+  border-radius: 8px;
+
+  overflow: hidden;
+}
+
+.summary-line {
+  min-height: 33px;
+
+  padding:
+    0 12px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  border-bottom:
+    1px solid
+    #e3ebe7;
+
+  color: #6a7b73;
+
+  font-size: 9px;
+}
+
+.summary-line strong {
+  color: #315247;
+
+  font-size: 9px;
+}
+
+.summary-grand {
+  min-height: 49px;
+
+  padding:
+    0 12px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  background:
+    linear-gradient(
+      100deg,
+      #edf9f1,
+      #e4f5eb
+    );
+
+  color: #087057;
+
+  font-size: 13px;
+
+  font-weight: 950;
+}
+
+.summary-grand strong {
+  font-size: 18px;
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.invoice-bottom {
+  margin-top: 22px;
+
+  padding-top: 15px;
+
+  border-top:
+    1px solid
+    #dce7e2;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.return-policy {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+
+  color: #64766e;
+
+  font-size: 9px;
+}
+
+.return-policy strong {
+  color: #426357;
+
+  font-size: 10px;
+}
+
+.signature {
+  text-align: right;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+.signature small {
+  color: #8b9792;
+
+  font-size: 7px;
+
+  font-weight: 900;
+
+  letter-spacing: .8px;
+}
+
+.signature strong {
+  color: #087057;
+
+  font-size: 10px;
+
+  font-weight: 950;
+}
+
+.signature span {
+  color: #87938e;
+
+  font-size: 7px;
+}
+
+/* ==========================================
+   ACTIONS
+========================================== */
+
+.action-panel {
+  margin-top: 15px;
+
+  padding: 13px;
+
+  border:
+    1px solid
+    #d9e5df;
+
+  border-radius: 10px;
+
+  background: white;
+
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 8px;
+
+  box-shadow:
+    0 8px 25px
+    rgba(35,73,59,.06);
+}
+
+.action-btn {
+  min-height: 40px;
+
+  padding:
+    0 15px;
+
+  border: none;
+
+  border-radius: 7px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  font-size: 9px;
+
+  font-weight: 950;
+
+  cursor: pointer;
+}
+
+.whatsapp-btn {
+  color: #16864b;
+  background: #eaf8ee;
+}
+
+.print-btn {
+  color: #40584e;
+  background: #f1f4f3;
+}
+
+.pdf-btn {
+  color: #93691e;
+  background: #fff5e6;
+}
+
+.save-btn {
+  min-width: 190px;
+
+  color: white;
+
+  background:
+    linear-gradient(
+      135deg,
+      #079b5b,
+      #06754d
+    );
+}
+
+.action-btn:disabled {
+  opacity: .45;
+
+  cursor: not-allowed;
+}
+
+/* ==========================================
+   SUCCESS
+========================================== */
+
+.success-panel {
+  margin-top: 12px;
+
+  padding:
+    12px 14px;
+
+  border:
+    1px solid
+    #c9e6d2;
+
+  border-radius: 9px;
+
+  background: #f0fbf4;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.success-icon {
+  width: 31px;
+  height: 31px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #099b5b;
+
+  color: white;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 950;
+}
+
+.success-message {
+  flex: 1;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+.success-message strong {
+  color: #286344;
+
+  font-size: 10px;
+}
+
+.success-message span {
+  color: #788981;
+
+  font-size: 8px;
+}
+
+.success-panel button {
+  padding:
+    8px 13px;
+
+  border:
+    1px solid
+    #0a9557;
+
+  border-radius: 6px;
+
+  background: white;
+
+  color: #087057;
+
+  font-size: 9px;
+
+  font-weight: 900;
+
+  cursor: pointer;
+}
+
+.page-footer {
+  padding:
+    16px 0 3px;
+
+  color: #89958f;
+
+  text-align: center;
+
+  font-size: 8px;
+}
+
+.page-footer span {
+  padding:
+    0 7px;
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 1050px) {
+
+  .main-container {
+    width:
+      calc(100% - 24px);
+  }
+
+  .billing-card {
+    padding: 22px;
+  }
+
+  .customer-card {
+    grid-template-columns:
+      1fr 1fr;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 700px) {
+
+  .topbar {
+    min-height: 62px;
+
+    padding:
+      0 13px;
+  }
+
+  .top-logo {
+    width: 36px;
+    height: 36px;
+
+    font-size: 21px;
+  }
+
+  .top-shop-name {
+    font-size: 13px;
+  }
+
+  .top-caption {
+    font-size: 7px;
+  }
+
+  .system-status {
+    display: none;
+  }
+
+  .main-container {
+    width:
+      calc(100% - 12px);
+
+    margin:
+      8px auto 15px;
+  }
+
+  .billing-card {
+    padding:
+      16px 12px;
+
+    border-radius: 10px;
+  }
+
+  .bill-header {
+    min-height: auto;
+
+    flex-direction: column;
+  }
+
+  .brand-area {
+    padding-right: 0;
+
+    gap: 10px;
+  }
+
+  .logo-wrap {
+    width: 51px;
+    height: 51px;
+  }
+
+  .shop-info h1 {
+    font-size: 20px;
+  }
+
+  .shop-info h2 {
+    font-size: 14px;
+  }
+
+  .shop-tagline {
+    font-size: 8px;
+  }
+
+  .shop-contact {
+    font-size: 7px;
+  }
+
+  .invoice-meta {
+    position: static;
+
+    width: 100%;
+
+    margin-top: 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 7px;
+
+    text-align: left;
+  }
+
+  .meta-number {
+    font-size: 16px;
+
+    margin-top: 0;
+  }
+
+  .date-label {
+    margin-top: 0;
+
+    margin-left: 10px;
+  }
+
+  .meta-date {
+    margin-top: 0;
+  }
+
+  .header-controls {
+    margin-top: 12px;
+
+    padding-bottom: 3px;
+
+    align-items: flex-start;
+  }
+
+  .hindi-name-input {
+    width: 100%;
+  }
+
+  .customer-card {
+    grid-template-columns:
+      1fr;
+
+    padding: 11px;
+  }
+
+  .medicine-table-wrapper {
+    border-radius: 7px;
+  }
+
+  .summary-wrapper {
+    justify-content: stretch;
+  }
+
+  .summary-box {
+    width: 100%;
+  }
+
+  .invoice-bottom {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .signature {
+    width: 100%;
+
+    text-align: left;
+  }
+
+  .action-panel {
+    display: grid;
+
+    grid-template-columns:
+      1fr 1fr;
+
+    padding: 9px;
+
+    gap: 7px;
+  }
+
+  .action-btn {
+    width: 100%;
+
+    padding:
+      0 7px;
+  }
+
+  .save-btn {
+    min-width: 0;
+
+    grid-column:
+      1 / -1;
+  }
+
+  .success-panel {
+    align-items: flex-start;
+
+    flex-wrap: wrap;
+  }
+
+  .success-message {
+    min-width:
+      calc(100% - 45px);
+  }
+
+  .success-panel button {
+    width: 100%;
+  }
+}
+
+/* ==========================================
+   PRINT / A4
+========================================== */
+
+@page {
+  size: A4 portrait;
+  margin: 0;
+}
+
+@media print {
+
+  html,
+  body {
+    width: 210mm !important;
+    min-width: 210mm !important;
+
+    height: auto !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    background: white !important;
+  }
+
+  body {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  body * {
+    visibility: hidden !important;
+  }
+
+  #printable-invoice,
+  #printable-invoice * {
+    visibility: visible !important;
+  }
+
+  #printable-invoice {
+
+    position: absolute !important;
+
+    left: 0 !important;
+    top: 0 !important;
+
+    width: 210mm !important;
+
+    min-height: 297mm !important;
+
+    margin: 0 !important;
+
+    padding:
+      10mm 11mm !important;
+
+    border:
+      1.2px solid
+      #087057 !important;
+
+    border-radius: 0 !important;
+
+    box-shadow: none !important;
+
+    background: white !important;
+
+    overflow: hidden !important;
+  }
+
+  .bill-header {
+
+    min-height: 45mm !important;
+
+    display: flex !important;
+
+    flex-direction: row !important;
+
+    position: relative !important;
+  }
+
+  .brand-area {
+    padding-right: 35mm !important;
+
+    gap: 5mm !important;
+  }
+
+  .logo-wrap {
+    width: 20mm !important;
+    height: 20mm !important;
+
+    flex-shrink: 0 !important;
+  }
+
+  .shop-info h1 {
+    font-size: 23pt !important;
+
+    line-height: .94 !important;
+
+    color: #087057 !important;
+  }
+
+  .shop-info h2 {
+    margin-top: 2mm !important;
+
+    font-size: 15pt !important;
+
+    color: #087057 !important;
+  }
+
+  .shop-tagline {
+    margin-top: 2mm !important;
+
+    font-size: 7.5pt !important;
+  }
+
+  .shop-contact {
+    margin-top: 1mm !important;
+
+    font-size: 7pt !important;
+  }
+
+  .invoice-meta {
+    position: absolute !important;
+
+    top: 0 !important;
+    right: 0 !important;
+
+    width: 25mm !important;
+
+    text-align: right !important;
+  }
+
+  .meta-label {
+    font-size: 6.5pt !important;
+  }
+
+  .meta-number {
+    font-size: 17pt !important;
+  }
+
+  .date-label {
+    margin-top: 5mm !important;
+  }
+
+  .meta-date {
+    font-size: 8pt !important;
+  }
+
+  .header-controls {
+    display: none !important;
+  }
+
+  .bill-divider {
+    margin-top: 0 !important;
+
+    background: #087057 !important;
+  }
+
+  .customer-section,
+  .medicine-section {
+    margin-top: 5mm !important;
+  }
+
+  .section-heading {
+    margin-bottom: 2mm !important;
+  }
+
+  .section-icon {
+    display: none !important;
+  }
+
+  .section-heading h3 {
+    font-size: 9pt !important;
+
+    color: #087057 !important;
+  }
+
+  .section-heading p {
+    display: none !important;
+  }
+
+  .customer-card {
+
+    grid-template-columns:
+      1fr 1fr !important;
+
+    gap: 0 !important;
+
+    padding: 0 !important;
+
+    border: none !important;
+
+    border-radius: 0 !important;
+
+    background: white !important;
+  }
+
+  .customer-field {
+
+    min-height: 9mm !important;
+
+    padding:
+      1.5mm 2mm !important;
+
+    border-bottom:
+      .5px dashed
+      #087057 !important;
+  }
+
+  .customer-field label {
+
+    margin-bottom: 1mm !important;
+
+    font-size: 6pt !important;
+
+    color: #087057 !important;
+  }
+
+  .customer-field input {
+
+    height: 6mm !important;
+
+    padding: 0 !important;
+
+    border: none !important;
+
+    border-radius: 0 !important;
+
+    background: transparent !important;
+
+    font-size: 7pt !important;
+
+    color: #173e31 !important;
+
+    outline: none !important;
+  }
+
+  .medicine-table-wrapper {
+
+    overflow: visible !important;
+
+    border:
+      1px solid
+      #087057 !important;
+
+    border-radius: 0 !important;
+  }
+
+  .medicine-table {
+
+    width: 100% !important;
+
+    min-width: 0 !important;
+
+    table-layout: fixed !important;
+
+    border-collapse: collapse !important;
+  }
+
+  .medicine-table th {
+
+    height: 9mm !important;
+
+    padding: 1mm !important;
+
+    background: white !important;
+
+    border:
+      1px solid
+      #087057 !important;
+
+    color: #087057 !important;
+
+    font-size: 6.5pt !important;
+
+    line-height: 1.1 !important;
+  }
+
+  .medicine-table td {
+
+    height: 10mm !important;
+
+    padding: 1mm !important;
+
+    border:
+      1px solid
+      #087057 !important;
+
+    background: white !important;
+
+    color: #173e31 !important;
+
+    font-size: 6.5pt !important;
+
+    vertical-align: middle !important;
+  }
+
+  .medicine-table td input {
+
+    width: 100% !important;
+
+    height: auto !important;
+
+    min-height: 4mm !important;
+
+    padding: 0 !important;
+
+    border: none !important;
+
+    border-radius: 0 !important;
+
+    outline: none !important;
+
+    background: transparent !important;
+
+    color: #173e31 !important;
+
+    font-size: 6.5pt !important;
+  }
+
+  .medicine-table input::placeholder {
+    color: transparent !important;
+  }
+
+  .expiry-input {
+    text-align: center !important;
+    font-weight: 700 !important;
+  }
+
+  .row-no {
+    font-size: 6.5pt !important;
+  }
+
+  .amount-cell {
+    font-size: 6.5pt !important;
+
+    color: #087057 !important;
+  }
+
+  .medicine-table th:last-child,
+  .medicine-table td:last-child {
+    display: none !important;
+  }
+
+  .add-medicine {
+    display: none !important;
+  }
+
+  .summary-wrapper {
+
+    margin-top: 4mm !important;
+
+    justify-content: flex-end !important;
+  }
+
+  .summary-box {
+
+    width: 67mm !important;
+
+    border:
+      1px solid
+      #087057 !important;
+
+    border-radius: 0 !important;
+  }
+
+  .summary-line {
+
+    min-height: 6mm !important;
+
+    padding:
+      0 2mm !important;
+
+    font-size: 6.5pt !important;
+  }
+
+  .summary-line strong {
+    font-size: 6.5pt !important;
+  }
+
+  .summary-grand {
+
+    min-height: 9mm !important;
+
+    padding:
+      0 2mm !important;
+
+    background: white !important;
+
+    border-top:
+      1px solid
+      #087057 !important;
+
+    color: #087057 !important;
+
+    font-size: 8.5pt !important;
+  }
+
+  .summary-grand strong {
+    font-size: 11pt !important;
+  }
+
+  .invoice-bottom {
+
+    margin-top: 6mm !important;
+
+    padding-top: 4mm !important;
+
+    border-top:
+      1px solid
+      #087057 !important;
+  }
+
+  .return-policy {
+    font-size: 6.5pt !important;
+  }
+
+  .return-policy strong {
+    font-size: 7pt !important;
+  }
+
+  .return-policy span {
+    font-size: 6pt !important;
+  }
+
+  .signature small {
+    font-size: 5.5pt !important;
+  }
+
+  .signature strong {
+    font-size: 7pt !important;
+  }
+
+  .signature span {
+    font-size: 5.5pt !important;
+  }
+
+  .medicine-table tr {
+
+    page-break-inside: avoid !important;
+
+    break-inside: avoid !important;
+  }
+
+  .topbar,
+  .action-panel,
+  .success-panel,
+  .page-footer {
+    display: none !important;
+  }
+}
