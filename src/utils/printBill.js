@@ -1,5 +1,3 @@
 export function printBill() {
-  setTimeout(() => {
-    window.print();
-  }, 100);
+  window.print();
 }
