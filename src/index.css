@@ -1321,10 +1321,9 @@ input {
 
   html,
   body {
-    width: 210mm !important;
-    min-width: 210mm !important;
-
-    height: auto !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
 
     margin: 0 !important;
     padding: 0 !important;
@@ -1337,50 +1336,64 @@ input {
     print-color-adjust: exact !important;
   }
 
-  body * {
-    visibility: hidden !important;
+  /* Hide the website UI. Only the invoice is printed. */
+  .topbar,
+  .action-panel,
+  .success-panel,
+  .page-footer,
+  .add-medicine,
+  .header-controls,
+  .delete-row {
+    display: none !important;
   }
 
-  #printable-invoice,
+  .main-container {
+    width: 210mm !important;
+    max-width: 210mm !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* ==========================================
+     ONLY BILL / INVOICE
+  ========================================== */
+
+  #printable-invoice {
+    display: block !important;
+
+    visibility: visible !important;
+
+    position: relative !important;
+
+    width: 210mm !important;
+    max-width: 210mm !important;
+    min-height: 297mm !important;
+
+    margin: 0 !important;
+    padding: 10mm 11mm !important;
+
+    border: 1px solid #087057 !important;
+    border-radius: 0 !important;
+
+    box-shadow: none !important;
+    background: white !important;
+
+    overflow: visible !important;
+  }
+
   #printable-invoice * {
     visibility: visible !important;
   }
 
-  #printable-invoice {
-
-    position: absolute !important;
-
-    left: 0 !important;
-    top: 0 !important;
-
-    width: 210mm !important;
-
-    min-height: 297mm !important;
-
-    margin: 0 !important;
-
-    padding:
-      10mm 11mm !important;
-
-    border:
-      1.2px solid
-      #087057 !important;
-
-    border-radius: 0 !important;
-
-    box-shadow: none !important;
-
-    background: white !important;
-
-    overflow: hidden !important;
-  }
+  /* ==========================================
+     BILL HEADER
+  ========================================== */
 
   .bill-header {
-
     min-height: 45mm !important;
 
     display: flex !important;
-
     flex-direction: row !important;
 
     position: relative !important;
@@ -1388,7 +1401,6 @@ input {
 
   .brand-area {
     padding-right: 35mm !important;
-
     gap: 5mm !important;
   }
 
@@ -1401,29 +1413,23 @@ input {
 
   .shop-info h1 {
     font-size: 23pt !important;
-
     line-height: .94 !important;
-
     color: #087057 !important;
   }
 
   .shop-info h2 {
     margin-top: 2mm !important;
-
     font-size: 15pt !important;
-
     color: #087057 !important;
   }
 
   .shop-tagline {
     margin-top: 2mm !important;
-
     font-size: 7.5pt !important;
   }
 
   .shop-contact {
     margin-top: 1mm !important;
-
     font-size: 7pt !important;
   }
 
@@ -1454,15 +1460,14 @@ input {
     font-size: 8pt !important;
   }
 
-  .header-controls {
-    display: none !important;
-  }
-
   .bill-divider {
     margin-top: 0 !important;
-
     background: #087057 !important;
   }
+
+  /* ==========================================
+     SECTIONS
+  ========================================== */
 
   .customer-section,
   .medicine-section {
@@ -1479,7 +1484,6 @@ input {
 
   .section-heading h3 {
     font-size: 9pt !important;
-
     color: #087057 !important;
   }
 
@@ -1487,140 +1491,111 @@ input {
     display: none !important;
   }
 
-  .customer-card {
+  /* ==========================================
+     CUSTOMER
+  ========================================== */
 
-    grid-template-columns:
-      1fr 1fr !important;
+  .customer-card {
+    grid-template-columns: 1fr 1fr !important;
 
     gap: 0 !important;
-
     padding: 0 !important;
 
     border: none !important;
-
     border-radius: 0 !important;
 
     background: white !important;
   }
 
   .customer-field {
-
     min-height: 9mm !important;
 
-    padding:
-      1.5mm 2mm !important;
+    padding: 1.5mm 2mm !important;
 
-    border-bottom:
-      .5px dashed
-      #087057 !important;
+    border-bottom: .5px dashed #087057 !important;
   }
 
   .customer-field label {
-
     margin-bottom: 1mm !important;
-
     font-size: 6pt !important;
-
     color: #087057 !important;
   }
 
   .customer-field input {
-
     height: 6mm !important;
 
     padding: 0 !important;
 
     border: none !important;
-
     border-radius: 0 !important;
 
     background: transparent !important;
 
     font-size: 7pt !important;
-
     color: #173e31 !important;
 
     outline: none !important;
   }
 
-  .medicine-table-wrapper {
+  /* ==========================================
+     MEDICINE TABLE
+  ========================================== */
 
+  .medicine-table-wrapper {
     overflow: visible !important;
 
-    border:
-      1px solid
-      #087057 !important;
-
+    border: 1px solid #087057 !important;
     border-radius: 0 !important;
   }
 
   .medicine-table {
-
     width: 100% !important;
-
     min-width: 0 !important;
 
     table-layout: fixed !important;
-
     border-collapse: collapse !important;
   }
 
   .medicine-table th {
-
     height: 9mm !important;
-
     padding: 1mm !important;
 
     background: white !important;
 
-    border:
-      1px solid
-      #087057 !important;
+    border: 1px solid #087057 !important;
 
     color: #087057 !important;
 
     font-size: 6.5pt !important;
-
     line-height: 1.1 !important;
   }
 
   .medicine-table td {
-
     height: 10mm !important;
-
     padding: 1mm !important;
 
-    border:
-      1px solid
-      #087057 !important;
+    border: 1px solid #087057 !important;
 
     background: white !important;
-
     color: #173e31 !important;
 
     font-size: 6.5pt !important;
-
     vertical-align: middle !important;
   }
 
   .medicine-table td input {
-
     width: 100% !important;
 
     height: auto !important;
-
     min-height: 4mm !important;
 
     padding: 0 !important;
 
     border: none !important;
-
     border-radius: 0 !important;
-
     outline: none !important;
 
     background: transparent !important;
-
     color: #173e31 !important;
 
     font-size: 6.5pt !important;
@@ -1641,7 +1616,6 @@ input {
 
   .amount-cell {
     font-size: 6.5pt !important;
-
     color: #087057 !important;
   }
 
@@ -1650,35 +1624,30 @@ input {
     display: none !important;
   }
 
-  .add-medicine {
-    display: none !important;
+  .medicine-table tr {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
   }
 
+  /* ==========================================
+     SUMMARY
+  ========================================== */
+
   .summary-wrapper {
-
     margin-top: 4mm !important;
-
     justify-content: flex-end !important;
   }
 
   .summary-box {
-
     width: 67mm !important;
 
-    border:
-      1px solid
-      #087057 !important;
-
+    border: 1px solid #087057 !important;
     border-radius: 0 !important;
   }
 
   .summary-line {
-
     min-height: 6mm !important;
-
-    padding:
-      0 2mm !important;
-
+    padding: 0 2mm !important;
     font-size: 6.5pt !important;
   }
 
@@ -1687,20 +1656,14 @@ input {
   }
 
   .summary-grand {
-
     min-height: 9mm !important;
-
-    padding:
-      0 2mm !important;
+    padding: 0 2mm !important;
 
     background: white !important;
 
-    border-top:
-      1px solid
-      #087057 !important;
+    border-top: 1px solid #087057 !important;
 
     color: #087057 !important;
-
     font-size: 8.5pt !important;
   }
 
@@ -1708,15 +1671,15 @@ input {
     font-size: 11pt !important;
   }
 
+  /* ==========================================
+     INVOICE FOOTER
+  ========================================== */
+
   .invoice-bottom {
-
     margin-top: 6mm !important;
-
     padding-top: 4mm !important;
 
-    border-top:
-      1px solid
-      #087057 !important;
+    border-top: 1px solid #087057 !important;
   }
 
   .return-policy {
@@ -1742,18 +1705,5 @@ input {
   .signature span {
     font-size: 5.5pt !important;
   }
-
-  .medicine-table tr {
-
-    page-break-inside: avoid !important;
-
-    break-inside: avoid !important;
-  }
-
-  .topbar,
-  .action-panel,
-  .success-panel,
-  .page-footer {
-    display: none !important;
-  }
 }
+

@@ -9,14 +9,24 @@ export async function generateBillPDF() {
   }
 
   try {
+    // Wait for browser to finish rendering
+    await new Promise((resolve) => {
+      requestAnimationFrame(() => {
+        requestAnimationFrame(resolve);
+      });
+    });
+
+    const billNumberElement =
+      element.querySelector(".meta-number");
+
     const billNumber =
-      document.querySelector(".bill-number")?.textContent?.trim() ||
-      "bill";
+      billNumberElement?.textContent?.trim() || "Bill";
 
     const options = {
       margin: [8, 8, 8, 8],
 
-      filename: `Shree-Ganesh-Bill-${billNumber}.pdf`,
+      filename:
+        `Shree-Ganesh-Aushadhi-Bhandar-Bill-${billNumber}.pdf`,
 
       image: {
         type: "jpeg",
@@ -28,6 +38,8 @@ export async function generateBillPDF() {
         useCORS: true,
         allowTaint: true,
         backgroundColor: "#ffffff",
+
+        logging: false,
 
         scrollX: 0,
         scrollY: 0,
@@ -54,12 +66,12 @@ export async function generateBillPDF() {
   } catch (error) {
 
     console.error(
-      "PDF generation failed:",
+      "PDF generation error:",
       error
     );
 
     alert(
-      "PDF save nahi ho pa raha. Please try again."
+      "Unable to save PDF Please try again."
     );
   }
 }
